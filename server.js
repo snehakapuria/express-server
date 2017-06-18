@@ -7,7 +7,7 @@ var app = express();
 //set port
 var port = process.env.PORT || 3000;
 
-mongoose.connect('mongodb://localhost/test');
+mongoose.connect('mongodb://localhost/web-test');
 
 // get all data/stuff of the body (POST) parameters
 // parse application/json
