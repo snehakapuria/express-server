@@ -25,6 +25,10 @@ router.route('/api/questions/:id').put(function(req, res) {
    questions.addQuestion(req,res);
 });
 
+router.route('/api/candidates/').post(function(req,res){
+  candidateApi.addCandidate(req,res);
+});
+
 router.route('/api/candidates/').put(function(req,res){
   candidateApi.addCandidate(req,res);
 });
