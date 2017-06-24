@@ -17,3 +17,19 @@ module.exports.addCandidate = function(req,res){
     res.json({candidate: candidate});
   });
 };
+
+module.exports.deleteCandidate = function(req,res){
+  var candidateId = req.param('id');
+console.log('delete', candidateId);
+  candidateModel.remove(function(error,candidate){
+    if(error){
+      res.send('error');
+    }
+
+    res.status(204).end();
+
+  });
+
+
+
+};
