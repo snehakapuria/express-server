@@ -9,6 +9,11 @@ module.exports.logInUser = function(req,res){
       'success': true
     });
   } else {
-    res.status(422).end();
+    res.status(422);
+    res.send({
+      'success': false,
+      'message': 'username and/or password is incorrect'
+    })
+
   }
 }
